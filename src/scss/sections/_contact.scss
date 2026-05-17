@@ -1,0 +1,77 @@
+//
+// Contact section styling
+//
+
+section#contact {
+    background-color: $dark-bg;
+    background-image: radial-gradient(circle at center, rgba($neon-purple, 0.15) 0%, rgba($dark-bg, 1) 70%);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .section-heading {
+        color: $white;
+    }
+
+    form#contactForm {
+        .form-group {
+            margin-bottom: $grid-gutter-width;
+
+            input,
+            textarea {
+                padding: 1.25rem;
+                background-color: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                color: $white;
+                border-radius: 0.5rem;
+                transition: all 0.3s ease;
+            }
+
+            input.form-control {
+                height: auto;
+            }
+        }
+
+        .form-group-textarea {
+            height: 100%;
+
+            textarea {
+                height: 100%;
+                min-height: 10rem;
+            }
+        }
+
+        p.help-block {
+            margin: 0;
+        }
+
+        .form-control:focus {
+            border-color: $neon-cyan;
+            box-shadow: 0 0 15px rgba($neon-cyan, 0.5);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-input-placeholder {
+            font-family: $headings-font-family;
+            font-weight: $headings-font-weight;
+            color: $gray-400;
+        }
+
+        :-moz-placeholder {
+            font-family: $headings-font-family;
+            font-weight: $headings-font-weight;
+            color: $gray-400;
+        }
+
+        ::-moz-placeholder {
+            font-family: $headings-font-family;
+            font-weight: $headings-font-weight;
+            color: $gray-400;
+        }
+
+        :-ms-input-placeholder {
+            font-family: $headings-font-family;
+            font-weight: $headings-font-weight;
+            color: $gray-400;
+        }
+    }
+}

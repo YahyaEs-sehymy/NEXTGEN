@@ -1,0 +1,43 @@
+//
+// Footer section styling
+//
+
+.footer {
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: $headings-font-family;
+    background-color: $dark-bg;
+    color: rgba($white, 0.7);
+    border-top: 1px solid rgba($white, 0.1);
+
+    .footer-link {
+        color: rgba($white, 0.7);
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $neon-cyan;
+        }
+    }
+
+    .btn-social {
+        height: 2.5rem;
+        width: 2.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: $dark-surface;
+        border: 1px solid rgba($white, 0.1);
+        color: $white;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: rgba($neon-purple, 0.2);
+            border-color: $neon-purple;
+            color: $white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba($neon-purple, 0.4);
+        }
+    }
+}

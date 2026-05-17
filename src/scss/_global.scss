@@ -1,0 +1,134 @@
+// 
+// Global theme styling
+// 
+
+// Scroll padding for all scroll targets on page used with
+// native CSS smooth scrolling
+// 
+// https://caniuse.com/?search=scroll-padding
+
+html {
+    scroll-padding-top: 4.5rem;
+}
+
+body {
+    position: relative;
+    background-color: $dark-bg;
+    color: #e2e8f0;
+    cursor: none; // Hide default cursor for custom one
+    // Disabled for now due to incompatibility with ScrollSpy in Bootstrap 5.2.x
+    // overflow-x: hidden;
+}
+
+// Custom Cursor
+#custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: $neon-cyan;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+}
+
+#cursor-trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba($neon-purple, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: all 0.15s ease-out;
+
+    &.hovering {
+        transform: translate(-50%, -50%) scale(1.5);
+        background-color: rgba($neon-purple, 0.1);
+        border-color: $neon-cyan;
+    }
+}
+
+// Scroll Progress Bar
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, $neon-cyan, $neon-purple);
+    z-index: 10000;
+    transition: width 0.1s ease-out;
+}
+
+// Glassmorphism utility
+.glass-card {
+    background: $dark-surface;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid $glass-border;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+// Text Utilities
+.text-gradient {
+    background: linear-gradient(90deg, $neon-cyan 0%, $neon-purple 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+// Animations
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Adjust the line height of paragraphs
+
+p {
+    line-height: $line-height-lg;
+}
+
+// Spacing and heading styling for page sections
+
+.page-section {
+    padding: 6rem 0;
+
+    h2.section-heading {
+        font-size: 2.5rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    h3.section-subheading {
+        font-size: 1rem;
+        font-weight: 400;
+        font-style: italic;
+        font-family: $subheadings-font-family;
+        margin-bottom: 4rem;
+    }
+}
+
+// Increase the padding on sections when screen size is greater
+// than the medium breakpoint (set by Bootstrap)
+
+@include media-breakpoint-up(md) {
+    section {
+        padding: 9rem 0;
+    }
+}

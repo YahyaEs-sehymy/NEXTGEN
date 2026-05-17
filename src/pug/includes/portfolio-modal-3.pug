@@ -1,0 +1,25 @@
+// Portfolio item 3 modal popup
+#portfolioModal3.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .close-modal(data-bs-dismiss='modal')
+                img(src='assets/img/close-icon.svg', alt='Close modal')
+            .container
+                .row.justify-content-center
+                    .col-lg-8
+                        .modal-body
+                            // Project details
+                            h2.text-uppercase Zenith AI
+                            p.item-intro.text-muted Product Design
+                            img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/3.jpg', alt='...')
+                            p A sleek product design for an advanced artificial intelligence platform, focusing on user accessibility, data visualization, and modern aesthetics.
+                            ul.list-inline
+                                li
+                                    strong Client:
+                                    | NeuralNet
+                                li
+                                    strong Category:
+                                    | AI/ML
+                            button.btn.btn-primary.btn-xl.text-uppercase.glass-card(data-bs-dismiss='modal', type='button')
+                                i.fas.fa-xmark.me-1
+                                | Close Project

@@ -1,0 +1,25 @@
+// Portfolio item 2 modal popup
+#portfolioModal2.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .close-modal(data-bs-dismiss='modal')
+                img(src='assets/img/close-icon.svg', alt='Close modal')
+            .container
+                .row.justify-content-center
+                    .col-lg-8
+                        .modal-body
+                            // Project details
+                            h2.text-uppercase FinTech Dash
+                            p.item-intro.text-muted UI/UX Design
+                            img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/2.jpg', alt='...')
+                            p An intuitive and award-winning dashboard interface crafted to simplify complex financial data, providing users with a frictionless banking experience.
+                            ul.list-inline
+                                li
+                                    strong Client:
+                                    | FinBank
+                                li
+                                    strong Category:
+                                    | Financial App
+                            button.btn.btn-primary.btn-xl.text-uppercase.glass-card(data-bs-dismiss='modal', type='button')
+                                i.fas.fa-xmark.me-1
+                                | Close Project

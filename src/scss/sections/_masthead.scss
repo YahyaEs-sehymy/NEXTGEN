@@ -1,0 +1,92 @@
+//
+// Masthead section styling
+//
+
+header.masthead {
+    padding-top: 6rem + 4.5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    color: $white;
+    background: radial-gradient(circle at 50% 50%, rgba($neon-purple, 0.2), $dark-bg 70%), $dark-bg;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+    #particles-js {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -20%;
+        left: -10%;
+        width: 50vw;
+        height: 50vw;
+        background: radial-gradient(circle, rgba($neon-cyan, 0.15) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -20%;
+        right: -10%;
+        width: 60vw;
+        height: 60vw;
+        background: radial-gradient(circle, rgba($neon-purple, 0.15) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .masthead-subheading {
+        font-size: 1.5rem;
+        font-style: italic;
+        line-height: 1.5rem;
+        margin-bottom: 25px;
+        font-family: $subheadings-font-family;
+    }
+
+    .masthead-heading {
+        font-size: 3.25rem;
+        font-weight: 700;
+        line-height: 3.25rem;
+        margin-bottom: 2rem;
+        font-family: $headings-font-family;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    header.masthead {
+        padding-top: 12.5rem + 4.5rem;
+        padding-bottom: 12.5rem;
+
+        .masthead-subheading {
+            font-size: 2.25rem;
+            font-style: italic;
+            line-height: 2.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .masthead-heading {
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 4.5rem;
+            margin-bottom: 4rem;
+        }
+    }
+}

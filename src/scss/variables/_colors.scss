@@ -1,0 +1,21 @@
+//
+// Colors
+//
+
+// Modern Dark Theme Colors
+$neon-cyan: #00f2fe;
+$neon-purple: #4facfe;
+$dark-bg: #0b0f19;
+$dark-surface: rgba(255, 255, 255, 0.05);
+$glass-border: rgba(255, 255, 255, 0.1);
+
+// Override Bootstrap color variables
+$yellow: $neon-cyan; // Kept for backwards compatibility
+
+// Override Bootstrap state colors variables
+$primary: $neon-cyan;
+$secondary: $neon-purple;
+$dark: $dark-bg;
+
+// Override Bootstrap contrast ratio
+$min-contrast-ratio: 1.5;
