@@ -1,7 +1,7 @@
 /*!
-* Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
-* Copyright 2013-2026 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/nextgen-agency-template/blob/master/LICENSE)
+* Agency v7.0.12
+* Copyright 2013-2026 Yahya ES-SEHYMY
+* Licensed under MIT
 */
 //
 // Scripts
